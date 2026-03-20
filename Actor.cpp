@@ -19,7 +19,6 @@ void AActor::Begin()
 
 void AActor::Tick()
 {
-
 }
 
 void AActor::Render()
