@@ -1,4 +1,5 @@
 #include "Goblin.h"
+#include <iostream>
 
 AGoblin::AGoblin()
 {
@@ -11,6 +12,11 @@ AGoblin::AGoblin()
 	Gold = 10;
 
 	Mesh = 0;
+}
+
+void AGoblin::AddActorLocalOffset()
+{
+	std::cout << "Goblin Move" << std::endl;
 }
 
 AGoblin::~AGoblin()

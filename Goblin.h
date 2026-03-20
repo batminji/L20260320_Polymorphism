@@ -4,6 +4,7 @@ class AGoblin : public AMonster
 {
 public:
 	AGoblin();
+	virtual void AddActorLocalOffset();
 	~AGoblin();
 };
 

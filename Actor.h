@@ -16,7 +16,7 @@ class AActor
 {
 public:
 	AActor();
-	void AddActorLocalOffset();
+	virtual void AddActorLocalOffset();
 	void Render();
 	~AActor();
 

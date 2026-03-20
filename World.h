@@ -1,8 +1,10 @@
 #pragma once
 #include "Player.h"
-#include "WildBoar.h"
-#include "Goblin.h"
-#include "Slime.h"
+
+class APlayer;
+class AWildBoar;
+class AGoblin;
+class ASlime;
 
 class UWorld
 {

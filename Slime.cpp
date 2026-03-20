@@ -1,4 +1,5 @@
 #include "Slime.h"
+#include <iostream>
 
 ASlime::ASlime()
 {
@@ -11,6 +12,11 @@ ASlime::ASlime()
 	Gold = 10;
 
 	Mesh = 0;
+}
+
+void ASlime::AddActorLocalOffset()
+{
+	std::cout << "Slime Move" << std::endl;
 }
 
 ASlime::~ASlime()

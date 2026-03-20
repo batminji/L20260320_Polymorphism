@@ -1,4 +1,5 @@
 #include "WildBoar.h"
+#include <iostream>
 
 AWildBoar::AWildBoar()
 {
@@ -11,6 +12,11 @@ AWildBoar::AWildBoar()
 	Gold = 10;
 
 	Mesh = 0;
+}
+
+void AWildBoar::AddActorLocalOffset()
+{
+	std::cout << "WildBoar Move" << std::endl;
 }
 
 AWildBoar::~AWildBoar()

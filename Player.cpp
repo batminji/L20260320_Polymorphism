@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <iostream>
 
 APlayer::APlayer()
 {
@@ -11,6 +12,11 @@ APlayer::APlayer()
 	Gold = 0;
 
 	Mesh = 0;
+}
+
+void APlayer::AddActorLocalOffset()
+{
+	std::cout << "Player Move" << std::endl;
 }
 
 void APlayer::Attack()

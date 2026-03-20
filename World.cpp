@@ -1,4 +1,7 @@
 #include "World.h"
+#include "WildBoar.h"
+#include "Goblin.h"
+#include "Slime.h"
 
 UWorld::UWorld()
 {
