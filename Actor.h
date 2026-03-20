@@ -17,6 +17,7 @@ class AActor
 public:
 	AActor();
 	void AddActorLocalOffset();
+	virtual void Move();
 	void Render();
 
 	const FTransform GetTransform();

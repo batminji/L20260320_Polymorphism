@@ -1,25 +1,24 @@
 #pragma once
 #include "Player.h"
 
-class APlayer;
-class AMonster;
+class AActor;
 
 class UWorld
 {
 public:
 	UWorld();
-	UWorld(int InWildBoarCounts, int InGoblinCounts, int InSlimeCounts);
+	UWorld(int InPlayerCounts, int InWildBoarCounts, int InGoblinCounts, int InSlimeCounts);
 	void Process();
 	void Render();
 	~UWorld();
 
 private:
+	int PlayerCounts;
 	int WildBoarCounts;
 	int GoblinCounts;
 	int SlimeCounts;
-	int MonsterCounts;
+	int ActorCounts;
 
-	APlayer* Player;
-	AMonster** Monsters;
+	AActor** Actors;
 };
 

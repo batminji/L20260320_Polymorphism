@@ -17,6 +17,11 @@ void AActor::AddActorLocalOffset()
 {
 }
 
+void AActor::Move()
+{
+
+}
+
 void AActor::Render()
 {
 }
