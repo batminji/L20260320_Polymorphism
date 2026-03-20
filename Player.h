@@ -11,8 +11,8 @@ public:
 	void Damaged();
 	void CollectGold(int Gold);
 
-	int GetGold();
-	void SetGold(int Gold);
+	int GetGold() const;
+	void SetGold(const int Gold);
 
 	~APlayer();
 

@@ -21,14 +21,14 @@ public:
 	virtual void Tick();
 	virtual void Render();
 
-	const FTransform GetTransform();
-	void SetTransform(FTransform Transform);
+	FTransform GetTransform() const;
+	void SetTransform(const FTransform Transform);
 
-	const FVector2D GetLocation();
-	void SetLocation(FVector2D Location);
+	FVector2D GetLocation() const;
+	void SetLocation(const FVector2D Location);
 
-	const FVector2D GetScale();
-	void SetScale(FVector2D Scale);
+	FVector2D GetScale() const;
+	void SetScale(const FVector2D Scale);
 
 	~AActor();
 

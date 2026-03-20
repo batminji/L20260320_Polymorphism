@@ -26,32 +26,32 @@ void AActor::Render()
 {
 }
 
-const FTransform AActor::GetTransform()
+FTransform AActor::GetTransform() const
 {
 	return Transform;
 }
 
-void AActor::SetTransform(FTransform Transform)
+void AActor::SetTransform(const FTransform Transform)
 {
 	this->Transform = Transform;
 }
 
-const FVector2D AActor::GetLocation()
+FVector2D AActor::GetLocation() const
 {
 	return Transform.Location;
 }
 
-void AActor::SetLocation(FVector2D Location)
+void AActor::SetLocation(const FVector2D Location)
 {
 	Transform.Location = Location;
 }
 
-const FVector2D AActor::GetScale()
+FVector2D AActor::GetScale() const
 {
 	return Transform.Scale;
 }
 
-void AActor::SetScale(FVector2D Scale)
+void AActor::SetScale(const FVector2D Scale)
 {
 	Transform.Scale = Scale;
 }

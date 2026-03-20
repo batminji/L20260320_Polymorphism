@@ -32,12 +32,12 @@ void APlayer::CollectGold(int Gold)
 {
 }
 
-int APlayer::GetGold()
+int APlayer::GetGold() const 
 {
 	return Gold;
 }
 
-void APlayer::SetGold(int Gold)
+void APlayer::SetGold(const int Gold)
 {
 	this->Gold = Gold;
 }
