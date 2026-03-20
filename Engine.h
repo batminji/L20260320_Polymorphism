@@ -6,8 +6,14 @@ class UEngine
 {
 public:
 	UEngine();
-	void Process();
+	void Initialize();
+	void Run();
+	void Terminate();
+
+	void Input();
+	void Tick();
 	void Render();
+
 	~UEngine();
 
 	UWorld* World;

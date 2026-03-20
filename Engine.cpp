@@ -3,10 +3,36 @@
 
 UEngine::UEngine()
 {
+	Initialize();
+}
+
+void UEngine::Initialize()
+{
 	World = new UWorld();
 }
 
-void UEngine::Process()
+void UEngine::Run()
+{
+	// Game Loop
+	while (true)
+	{
+		Input();
+		Tick();
+		Render();
+	}
+}
+
+void UEngine::Terminate()
+{
+	delete World;
+	World = nullptr;
+}
+
+void UEngine::Input()
+{
+}
+
+void UEngine::Tick()
 {
 	World->Process();
 }
@@ -18,6 +44,5 @@ void UEngine::Render()
 
 UEngine::~UEngine()
 {
-	delete World;
-	World = nullptr;
+	Terminate();
 }

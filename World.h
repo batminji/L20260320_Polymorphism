@@ -20,8 +20,8 @@ public:
 	int SlimeCounts;
 
 	APlayer* Player;
-	AWildBoar* WildBoars;
-	AGoblin* Goblins;
-	ASlime* Slimes;
+	AWildBoar** WildBoars;
+	AGoblin** Goblins;
+	ASlime** Slimes;
 };
 

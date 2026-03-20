@@ -12,18 +12,18 @@ UWorld::UWorld()
 	SlimeCounts = rand() % 10 + 1;
 
 	Player = new APlayer();
-	WildBoars = new AWildBoar[WildBoarCounts]();
-	Goblins = new AGoblin[GoblinCounts]();
-	Slimes = new ASlime[SlimeCounts]();
+	WildBoars = new AWildBoar*[WildBoarCounts]();
+	Goblins = new AGoblin*[GoblinCounts]();
+	Slimes = new ASlime*[SlimeCounts]();
 }
 
 UWorld::UWorld(int WildBoarCounts, int GoblinCounts, int SlimeCounts)
 	: WildBoarCounts(WildBoarCounts), GoblinCounts(GoblinCounts), SlimeCounts(SlimeCounts)
 {
 	Player = new APlayer();
-	WildBoars = new AWildBoar[WildBoarCounts]();
-	Goblins = new AGoblin[GoblinCounts]();
-	Slimes = new ASlime[SlimeCounts]();
+	WildBoars = new AWildBoar*[WildBoarCounts]();
+	Goblins = new AGoblin*[GoblinCounts]();
+	Slimes = new ASlime*[SlimeCounts]();
 }
 
 void UWorld::Process()
@@ -32,17 +32,17 @@ void UWorld::Process()
 
 	for (int i = 0; i < WildBoarCounts; ++i)
 	{
-		WildBoars[i].Move();
+		WildBoars[i]->Move();
 	}
 
 	for (int i = 0; i < GoblinCounts; ++i)
 	{
-		Goblins[i].Move();
+		Goblins[i]->Move();
 	}
 
 	for (int i = 0; i < SlimeCounts; ++i)
 	{
-		Slimes[i].Move();
+		Slimes[i]->Move();
 	}
 }
 
@@ -52,29 +52,50 @@ void UWorld::Render()
 
 	for (int i = 0; i < WildBoarCounts; ++i)
 	{
-		WildBoars[i].Render();
+		WildBoars[i]->Render();
 	}
 
 	for (int i = 0; i < GoblinCounts; ++i)
 	{
-		Goblins[i].Render();
+		Goblins[i]->Render();
 	}
 
 	for (int i = 0; i < SlimeCounts; ++i)
 	{
-		Slimes[i].Render();
+		Slimes[i]->Render();
 	}
 }
 
 UWorld::~UWorld()
 {
 	delete Player;
+	Player = nullptr;
+
+	for (int i = 0; i < WildBoarCounts; ++i)
+	{
+		delete WildBoars[i];
+		WildBoars[i] = nullptr;
+	}
+	delete[] WildBoars;
+	WildBoars = nullptr;
+
+	for (int i = 0; i < SlimeCounts; ++i)
+	{
+		delete Slimes[i];
+		Slimes[i] = nullptr;
+	}
+	delete[] Slimes;
+	Slimes = nullptr;
+
+	for (int i = 0; i < GoblinCounts; ++i)
+	{
+		delete Goblins[i];
+		Goblins[i] = nullptr;
+	}
+	delete[] Goblins;
+	Goblins = nullptr;
+
 	delete[] WildBoars;
 	delete[] Slimes;
 	delete[] Goblins;
-
-	Player = nullptr;
-	WildBoars = nullptr;
-	Slimes = nullptr;
-	Goblins = nullptr;
 }

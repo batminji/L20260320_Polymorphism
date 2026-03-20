@@ -7,8 +7,9 @@ int main()
 
 	UEngine* Engine = new UEngine();
 
-	Engine->Process();
-	Engine->Render();
+	Engine->Initialize();
+	Engine->Run();
+	Engine->Terminate();
 
 	delete Engine;
 	Engine = nullptr;

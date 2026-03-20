@@ -1,6 +1,6 @@
 #pragma once
 
-struct Vector2D
+struct FVector2D
 {
 	int X;
 	int Y;
@@ -8,8 +8,8 @@ struct Vector2D
 
 struct FTransform
 {
-	Vector2D Location;
-	Vector2D Scale;
+	FVector2D Location;
+	FVector2D Scale;
 };
 
 class AActor
