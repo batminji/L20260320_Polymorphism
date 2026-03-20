@@ -27,12 +27,12 @@ UWorld::UWorld()
 	}
 }
 
-UWorld::UWorld(int WildBoarCounts, int GoblinCounts, int SlimeCounts)
-	: WildBoarCounts(WildBoarCounts), GoblinCounts(GoblinCounts), SlimeCounts(SlimeCounts), MonsterCounts(WildBoarCounts + GoblinCounts + SlimeCounts)
+UWorld::UWorld(int InWildBoarCounts, int InGoblinCounts, int InSlimeCounts)
+	: WildBoarCounts(InWildBoarCounts), GoblinCounts(InGoblinCounts), SlimeCounts(InSlimeCounts), MonsterCounts(WildBoarCounts + GoblinCounts + SlimeCounts)
 {
 	Player = new APlayer();
 
-	Monsters = new AMonster * [MonsterCounts];
+	Monsters = new AMonster*[MonsterCounts];
 	for (int i = 0; i < WildBoarCounts; ++i)
 	{
 		Monsters[i] = new AWildBoar();

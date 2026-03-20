@@ -8,7 +8,7 @@ class UWorld
 {
 public:
 	UWorld();
-	UWorld(int WildBoarCounts, int GoblinCounts, int SlimeCounts);
+	UWorld(int InWildBoarCounts, int InGoblinCounts, int InSlimeCounts);
 	void Process();
 	void Render();
 	~UWorld();
