@@ -9,12 +9,13 @@ UEngine::UEngine()
 void UEngine::Initialize()
 {
 	World = new UWorld();
+	bIsRunning = true;
 }
 
 void UEngine::Run()
 {
 	// Game Loop
-	while (true)
+	while (bIsRunning)
 	{
 		Input();
 		Tick();

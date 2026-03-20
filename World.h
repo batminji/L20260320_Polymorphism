@@ -2,9 +2,7 @@
 #include "Player.h"
 
 class APlayer;
-class AWildBoar;
-class AGoblin;
-class ASlime;
+class AMonster;
 
 class UWorld
 {
@@ -15,13 +13,12 @@ public:
 	void Render();
 	~UWorld();
 
+	int MonsterCounts;
 	int WildBoarCounts;
 	int GoblinCounts;
 	int SlimeCounts;
 
 	APlayer* Player;
-	AWildBoar** WildBoars;
-	AGoblin** Goblins;
-	ASlime** Slimes;
+	AMonster** Monsters;
 };
 

@@ -17,5 +17,7 @@ public:
 	~UEngine();
 
 	UWorld* World;
+
+	bool bIsRunning;
 };
 
