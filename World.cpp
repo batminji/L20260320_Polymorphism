@@ -13,13 +13,13 @@ UWorld::UWorld()
 
 void UWorld::Process()
 {
-	Player->AddActorLocalOffset();
+	Player->Move();
 
 	for (int i = 0; i < 10; ++i)
 	{
-		WildBoars[i].AddActorLocalOffset();
-		Goblins[i].AddActorLocalOffset();
-		Slimes[i].AddActorLocalOffset();
+		WildBoars[i].Move();
+		Goblins[i].Move();
+		Slimes[i].Move();
 	}
 }
 

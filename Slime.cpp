@@ -14,9 +14,10 @@ ASlime::ASlime()
 	Mesh = 0;
 }
 
-void ASlime::AddActorLocalOffset()
+void ASlime::Move()
 {
 	std::cout << "Slime Move" << std::endl;
+	AddActorLocalOffset();
 }
 
 ASlime::~ASlime()

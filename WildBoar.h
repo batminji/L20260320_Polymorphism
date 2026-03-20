@@ -4,7 +4,7 @@ class AWildBoar : public AMonster
 {
 public:
 	AWildBoar();
-	virtual void AddActorLocalOffset();
+	virtual void Move();
 	~AWildBoar();
 };
 

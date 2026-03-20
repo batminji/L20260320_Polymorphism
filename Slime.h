@@ -4,7 +4,7 @@ class ASlime : public AMonster
 {
 public:
 	ASlime();
-	virtual void AddActorLocalOffset();
+	virtual void Move();
 	~ASlime();
 };
 

@@ -14,9 +14,10 @@ APlayer::APlayer()
 	Mesh = 0;
 }
 
-void APlayer::AddActorLocalOffset()
+void APlayer::Move()
 {
 	std::cout << "Player Move" << std::endl;
+	AddActorLocalOffset();
 }
 
 void APlayer::Attack()

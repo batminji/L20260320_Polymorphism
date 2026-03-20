@@ -14,9 +14,10 @@ AWildBoar::AWildBoar()
 	Mesh = 0;
 }
 
-void AWildBoar::AddActorLocalOffset()
+void AWildBoar::Move()
 {
 	std::cout << "WildBoar Move" << std::endl;
+	AddActorLocalOffset();
 }
 
 AWildBoar::~AWildBoar()

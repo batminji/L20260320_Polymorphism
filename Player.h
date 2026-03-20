@@ -4,7 +4,7 @@ class APlayer : public AActor
 {
 public:
 	APlayer();
-	virtual void AddActorLocalOffset();
+	void Move();
 	void Attack();
 	void Damaged();
 	void GetGold();
