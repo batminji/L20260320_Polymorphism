@@ -52,7 +52,7 @@ UWorld::UWorld(const int InPlayerCounts, const int InWildBoarCounts, const int I
 
 void UWorld::Tick()
 {
-	for (AActor* & const ActorRef : Actors)
+	for (const auto& ActorRef : Actors)
 	{
 		ActorRef->Tick();
 	}
@@ -60,7 +60,7 @@ void UWorld::Tick()
 
 void UWorld::Render()
 {
-	for (AActor* & const ActorRef : Actors)
+	for (const auto& ActorRef : Actors)
 	{
 		ActorRef->Render();
 	}
