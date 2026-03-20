@@ -10,9 +10,14 @@ class UWorld
 {
 public:
 	UWorld();
+	UWorld(int WildBoarCounts, int GoblinCounts, int SlimeCounts);
 	void Process();
 	void Render();
 	~UWorld();
+
+	int WildBoarCounts;
+	int GoblinCounts;
+	int SlimeCounts;
 
 	APlayer* Player;
 	AWildBoar* WildBoars;

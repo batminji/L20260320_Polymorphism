@@ -3,22 +3,45 @@
 #include "Goblin.h"
 #include "Slime.h"
 
+#include <stdlib.h>
+
 UWorld::UWorld()
 {
+	WildBoarCounts = rand() % 10 + 1;
+	GoblinCounts = rand() % 10 + 1;
+	SlimeCounts = rand() % 10 + 1;
+
 	Player = new APlayer();
-	WildBoars = new AWildBoar[10]();
-	Goblins = new AGoblin[10]();
-	Slimes = new ASlime[10]();
+	WildBoars = new AWildBoar[WildBoarCounts]();
+	Goblins = new AGoblin[GoblinCounts]();
+	Slimes = new ASlime[SlimeCounts]();
+}
+
+UWorld::UWorld(int WildBoarCounts, int GoblinCounts, int SlimeCounts)
+	: WildBoarCounts(WildBoarCounts), GoblinCounts(GoblinCounts), SlimeCounts(SlimeCounts)
+{
+	Player = new APlayer();
+	WildBoars = new AWildBoar[WildBoarCounts]();
+	Goblins = new AGoblin[GoblinCounts]();
+	Slimes = new ASlime[SlimeCounts]();
 }
 
 void UWorld::Process()
 {
 	Player->Move();
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < WildBoarCounts; ++i)
 	{
 		WildBoars[i].Move();
+	}
+
+	for (int i = 0; i < GoblinCounts; ++i)
+	{
 		Goblins[i].Move();
+	}
+
+	for (int i = 0; i < SlimeCounts; ++i)
+	{
 		Slimes[i].Move();
 	}
 }
@@ -27,10 +50,18 @@ void UWorld::Render()
 {
 	Player->Render();
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < WildBoarCounts; ++i)
 	{
 		WildBoars[i].Render();
+	}
+
+	for (int i = 0; i < GoblinCounts; ++i)
+	{
 		Goblins[i].Render();
+	}
+
+	for (int i = 0; i < SlimeCounts; ++i)
+	{
 		Slimes[i].Render();
 	}
 }
